@@ -1,0 +1,11 @@
+.strike{
+    text-decoration:line-through ;
+    /* background-color: rgb(34, 132, 34); */
+    /* color: white; */
+    width: 7rem;
+
+}
+.form-check-label {
+    color: green;
+    font-weight: bold;
+}

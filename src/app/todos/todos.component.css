@@ -1,0 +1,14 @@
+
+
+.todos{
+    margin-left: 4.4rem;
+}
+
+.para{
+    margin-left: 4.4rem;
+    color: red;
+    font-weight: bold;
+}
+.date{
+    float: right;
+}

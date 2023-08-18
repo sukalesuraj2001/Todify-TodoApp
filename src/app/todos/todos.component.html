@@ -1,0 +1,32 @@
+<!-- <h5 class=" date ">Date: {{cdate | date: 'EEEE, MMMM d, y'}}</h5> -->
+<div class="container mt-3">
+    <div class="row">
+
+        <div class="col-md-12 mt-5">
+            <h2 class=" heading text-center fw-bold">Todify ~ Add Your Todos. </h2>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 ms-5">
+                        <app-addtodo (onTodoAdd)="addTodo($event)"  ></app-addtodo>
+
+                    </div> 
+                </div>
+            </div>
+            <h4 class="todos mb-3 fw-bold">Your Todos</h4>
+
+            <div *ngIf="this.todos.length===0; else elseBlock">
+                <p class="para">No todos to display</p>
+            </div>
+
+            <ng-template #elseBlock>
+
+
+                <ul class="todo" *ngFor="let todo of todos;index as i" >
+                    <app-todo-item [todo]="todo"[i]='i' (todoDelete)="deleteTodo($event)" (todoCheckbox)='toggleTodo($event)'></app-todo-item>
+
+                </ul>
+            </ng-template>
+        </div>
+    </div>
+</div>
